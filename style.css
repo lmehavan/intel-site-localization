@@ -1,0 +1,809 @@
+/* ============================================
+   INTEL SUSTAINABILITY TIMELINE - STYLES
+   ============================================ */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0071c5 0%, #00a0d2 50%, #006ba6 100%);
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 700px;
+  color: white;
+}
+
+.intel-mark {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-intro {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: white;
+  color: #0071c5;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  transform: scale(1.05);
+}
+
+.cta-button:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+}
+
+/* ============================================
+   INSTRUCTIONS SECTION
+   ============================================ */
+
+.instructions {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.instructions-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.instructions-desktop,
+.instructions-mobile {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+@media (max-width: 800px) {
+  .instructions-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .instructions-mobile {
+    display: none;
+  }
+}
+
+/* ============================================
+   TIMELINE SECTION
+   ============================================ */
+
+.timeline-section {
+  padding: 80px 20px;
+  background-color: white;
+  max-width: 100%;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #0071c5;
+}
+
+/* Timeline Controls */
+.timeline-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.timeline-nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #0071c5;
+  background-color: white;
+  color: #0071c5;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.timeline-nav:hover {
+  background-color: #0071c5;
+  color: white;
+  transform: scale(1.1);
+}
+
+.timeline-nav:focus {
+  outline: 3px solid #0071c5;
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .timeline-controls {
+    display: none;
+  }
+}
+
+/* Timeline Container - Desktop */
+@media (min-width: 801px) {
+  .timeline-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .timeline-container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .timeline-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+
+  .timeline-container::-webkit-scrollbar-thumb {
+    background: #0071c5;
+    border-radius: 4px;
+  }
+
+  .timeline-container::-webkit-scrollbar-thumb:hover {
+    background: #00509e;
+  }
+}
+
+/* Timeline Container - Mobile */
+@media (max-width: 800px) {
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Milestone Card */
+.milestone-card {
+  flex: 0 0 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 800px) {
+  .milestone-card {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+
+/* Card Header */
+.card-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #006ba6 0%, #0071c5 100%);
+  color: white;
+  flex-shrink: 0;
+}
+
+.card-year {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Card Preview */
+.card-preview {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80px;
+  color: #333;
+}
+
+.card-preview p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Open Full Story Button */
+.open-story-btn {
+  margin: 20px 20px 20px 20px;
+  padding: 12px 20px;
+  background-color: #0071c5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.open-story-btn:hover {
+  background-color: #00509e;
+  transform: translateY(-2px);
+}
+
+.open-story-btn:focus {
+  outline: 2px solid #0071c5;
+  outline-offset: 2px;
+}
+
+/* Card Hover Effect (Desktop) */
+@media (min-width: 801px) {
+  .milestone-card {
+    cursor: pointer;
+  }
+
+  .milestone-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 113, 197, 0.2);
+  }
+}
+
+/* Card Focus */
+.milestone-card:focus-within {
+  outline: 3px solid #0071c5;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   MODAL DIALOG STYLING
+   ============================================ */
+
+.story-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.story-modal:not([open]) {
+  display: none !important;
+}
+
+.story-modal[open] {
+  display: flex;
+}
+
+.story-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: min(720px, calc(100% - 2rem));
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.modal-close:focus {
+  outline: 2px solid #0071c5;
+  outline-offset: 2px;
+}
+
+.modal-header {
+  padding: 40px 30px 20px;
+  background: linear-gradient(135deg, #006ba6 0%, #0071c5 100%);
+  color: white;
+}
+
+.modal-year {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-story {
+  padding: 30px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.modal-story p {
+  margin: 0;
+}
+
+.modal-source {
+  padding: 0 30px 30px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.modal-source a {
+  color: #0071c5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.modal-source a:hover {
+  color: #00509e;
+  text-decoration: underline;
+}
+
+.modal-source a:focus {
+  outline: 2px solid #0071c5;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Modal Responsive */
+@media (max-width: 600px) {
+  .modal-content {
+    width: calc(100% - 1rem);
+  }
+
+  .modal-header {
+    padding: 30px 20px 15px;
+  }
+
+  .modal-year {
+    font-size: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-image {
+    height: 200px;
+  }
+
+  .modal-story {
+    padding: 20px;
+  }
+
+  .modal-source {
+    padding: 0 20px 20px;
+  }
+}
+
+/* ============================================
+   FUTURE GOALS SECTION
+   ============================================ */
+
+.future-goals {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8eef5 100%);
+  padding: 80px 20px;
+}
+
+.future-goals-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.future-goals h2 {
+  font-size: 2.2rem;
+  color: #0071c5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.future-goals > div > p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.goal-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 113, 197, 0.15);
+}
+
+.goal-card h3 {
+  color: #0071c5;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.goal-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.goals-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.goals-link a {
+  color: #0071c5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  border-bottom: 2px solid #0071c5;
+}
+
+.goals-link a:hover {
+  color: #00509e;
+  border-bottom-color: #00509e;
+}
+
+.goals-link a:focus {
+  outline: 2px solid #0071c5;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ============================================
+   VERIFIED SOURCES SECTION
+   ============================================ */
+
+.sources-section {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.sources-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sources-section h2 {
+  font-size: 1.8rem;
+  color: #0071c5;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sources-section > div > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.sources-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.sources-list li {
+  padding: 12px 15px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.sources-list a {
+  color: #0071c5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.sources-list a:hover {
+  color: #00509e;
+  text-decoration: underline;
+}
+
+.sources-list a:focus {
+  outline: 2px solid #0071c5;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-intro {
+    font-size: 1.1rem;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .future-goals h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 0.95rem;
+  }
+
+  .intel-mark {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-section {
+    padding: 60px 20px;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .future-goals {
+    padding: 60px 20px;
+  }
+
+  .sources-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY - REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cta-button:hover,
+  .cta-button:focus {
+    transform: none;
+  }
+
+  .timeline-nav:hover {
+    transform: none;
+  }
+
+  .milestone-card:hover {
+    transform: none;
+  }
+
+  .goal-card:hover {
+    transform: none;
+  }
+
+  .open-story-btn:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   FOCUS INDICATORS
+   ============================================ */
+
+*:focus-visible {
+  outline: 3px solid #0071c5;
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline: 2px solid #0071c5;
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid #0071c5;
+  outline-offset: 4px;
+}
