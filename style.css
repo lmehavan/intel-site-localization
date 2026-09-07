@@ -387,7 +387,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
+.story-modal-content {
   position: relative;
   background: white;
   border-radius: 8px;
@@ -428,7 +428,7 @@ body {
   outline-offset: 2px;
 }
 
-.modal-header {
+.story-modal-header {
   padding: 40px 30px 20px;
   background: linear-gradient(135deg, #006ba6 0%, #0071c5 100%);
   color: white;
@@ -441,7 +441,7 @@ body {
   margin-bottom: 10px;
 }
 
-.modal-title {
+.story-modal-title {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
@@ -492,11 +492,11 @@ body {
 
 /* Modal Responsive */
 @media (max-width: 600px) {
-  .modal-content {
+  .story-modal-content {
     width: calc(100% - 1rem);
   }
 
-  .modal-header {
+  .story-modal-header {
     padding: 30px 20px 15px;
   }
 
@@ -504,7 +504,7 @@ body {
     font-size: 1.5rem;
   }
 
-  .modal-title {
+  .story-modal-title {
     font-size: 1.3rem;
   }
 

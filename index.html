@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore Intel's journey through innovation, environmental responsibility, and its commitment to a more sustainable future.">
-  <title>Intel Sustainability Timeline</title>
+  <title>Intel Sustainability | A Shared Future</title>
+  <link id="bootstrap-css" rel="stylesheet" href="vendor/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="localization.css">
 </head>
-<body>
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+  <header class="global-header">
+    <nav class="container site-navigation" aria-label="Main navigation" data-i18n-aria="nav">
+      <a class="wordmark" href="#top" aria-label="intel. Intel sustainability home" data-i18n-aria="home"><span aria-hidden="true">intel<span class="brand-dot">.</span></span></a>
+      <div class="nav-actions">
+        <a href="#future-heading" data-i18n="navGoals">Our focus</a>
+        <a href="#newsletter" data-i18n="navNewsletter">Newsletter</a>
+        <div class="language-control"><label for="language" data-i18n="language">Language</label><select id="language" class="form-select" aria-label="Language / اللغة"><option value="en" lang="en">English</option><option value="ar" lang="ar">العربية</option></select></div>
+      </div>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-content">
-      <div class="intel-mark">◆ INTEL</div>
-      <h1>Sustainability Through the Ages</h1>
-      <p class="hero-intro">Explore Intel's journey through innovation, environmental responsibility, and its commitment to a more sustainable future.</p>
-      <a href="#timeline" class="cta-button">Explore Timeline</a>
+      <div class="intel-mark" data-i18n="eyebrow">INNOVATION. RESPONSIBILITY. A SHARED FUTURE.</div>
+      <h1 id="hero-heading" data-i18n="hero">Sustainability<br>through the ages.</h1>
+      <p class="hero-intro" data-i18n="intro">Explore Intel's journey through innovation, environmental responsibility, and its commitment to a more sustainable future.</p>
+      <a href="#timeline" class="cta-button" data-i18n="explore">Explore Timeline</a>
     </div>
-    <div class="hero-background"></div>
+    <div class="hero-background" aria-hidden="true"></div>
   </section>
 
   <!-- Instructions Section -->
   <section class="instructions">
     <div class="instructions-content">
-      <p class="instructions-desktop">💡 <strong>Desktop:</strong> Hover over cards to preview stories, then click "Open Full Story" to learn more.</p>
-      <p class="instructions-mobile">📱 <strong>Mobile:</strong> Tap "Open Full Story" on each card to explore each milestone.</p>
+      <p class="instructions-desktop" data-i18n="desktop">💡 <strong>Desktop:</strong> Hover over cards to preview stories, then click "Open Full Story" to learn more.</p>
+      <p class="instructions-mobile" data-i18n="mobile">📱 <strong>Mobile:</strong> Tap "Open Full Story" on each card to explore each milestone.</p>
     </div>
   </section>
 
   <!-- Timeline Section -->
-  <section id="timeline" class="timeline-section">
-    <h2>Milestones in Innovation & Sustainability</h2>
+  <section id="timeline" class="timeline-section" aria-labelledby="timeline-heading">
+    <h2 id="timeline-heading" data-i18n="timeline">Milestones in innovation &amp; sustainability</h2>
     
     <div class="timeline-controls">
-      <button class="timeline-nav timeline-prev" aria-label="Scroll timeline left">‹</button>
-      <button class="timeline-nav timeline-next" aria-label="Scroll timeline right">›</button>
+      <button class="timeline-nav timeline-prev" type="button" aria-label="Previous milestones" data-i18n-aria="previous">‹</button>
+      <button class="timeline-nav timeline-next" type="button" aria-label="Next milestones" data-i18n-aria="next">›</button>
     </div>
 
-    <div class="timeline-container">
+    <div class="timeline-container" tabindex="0" role="region" aria-label="Scrollable milestone timeline" data-i18n-aria="timelineRegion">
       <!-- Card 1: 1968 -->
       <article class="milestone-card" data-year="1968" data-id="1968">
         <div class="card-header">
@@ -47,7 +61,7 @@
         <div class="card-preview">
           <p>Robert Noyce and Gordon Moore founded Intel in 1968 with a commitment to continuous innovation.</p>
         </div>
-        <button class="open-story-btn" data-id="1968">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="1968">Open Full Story</button>
       </article>
 
       <!-- Card 2: 1971 -->
@@ -60,7 +74,7 @@
         <div class="card-preview">
           <p>Released in 1971, the Intel 4004 helped place a programmable processor onto a single chip.</p>
         </div>
-        <button class="open-story-btn" data-id="1971">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="1971">Open Full Story</button>
       </article>
 
       <!-- Card 3: 1978 -->
@@ -73,7 +87,7 @@
         <div class="card-preview">
           <p>Intel introduced the 8086 in 1978, establishing an architecture that influenced generations of personal computers.</p>
         </div>
-        <button class="open-story-btn" data-id="1978">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="1978">Open Full Story</button>
       </article>
 
       <!-- Card 4: 1985 -->
@@ -86,7 +100,7 @@
         <div class="card-preview">
           <p>Introduced in 1985, Intel's 32-bit 386 processor delivered more than twice the performance of the 286.</p>
         </div>
-        <button class="open-story-btn" data-id="1985">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="1985">Open Full Story</button>
       </article>
 
       <!-- Card 5: 2006 -->
@@ -99,7 +113,7 @@
         <div class="card-preview">
           <p>In 2006, Intel began shipping processors based on the Intel Core microarchitecture, emphasizing energy-efficient performance.</p>
         </div>
-        <button class="open-story-btn" data-id="2006">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="2006">Open Full Story</button>
       </article>
 
       <!-- Card 6: 2020 -->
@@ -112,7 +126,7 @@
         <div class="card-preview">
           <p>Intel introduced its 2030 RISE strategy to advance responsibility, inclusion, sustainability and enabling technology.</p>
         </div>
-        <button class="open-story-btn" data-id="2020">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="2020">Open Full Story</button>
       </article>
 
       <!-- Card 7: 2022 -->
@@ -125,7 +139,7 @@
         <div class="card-preview">
           <p>Intel committed to reaching net-zero Scope 1 and Scope 2 greenhouse gas emissions across global operations by 2040.</p>
         </div>
-        <button class="open-story-btn" data-id="2022">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="2022">Open Full Story</button>
       </article>
 
       <!-- Card 8: 2023 -->
@@ -138,7 +152,7 @@
         <div class="card-preview">
           <p>Intel reported using 99% renewable electricity across its worldwide operations in 2023.</p>
         </div>
-        <button class="open-story-btn" data-id="2023">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="2023">Open Full Story</button>
       </article>
 
       <!-- Card 9: 2024 -->
@@ -151,61 +165,72 @@
         <div class="card-preview">
           <p>Intel's inaugural global Sustainability Summit brought more than 140 organizations together in 2024.</p>
         </div>
-        <button class="open-story-btn" data-id="2024">Open Full Story</button>
+        <button type="button" class="open-story-btn" aria-haspopup="dialog" data-i18n="readStory" data-id="2024">Open Full Story</button>
       </article>
     </div>
   </section>
 
   <!-- Modal Dialog for Full Stories -->
-  <dialog id="story-modal" class="story-modal">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Close modal">✕</button>
+  <dialog id="story-modal" class="story-modal" aria-labelledby="modal-title">
+    <div class="story-modal-content">
+      <button class="modal-close" type="button" aria-label="Close story" data-i18n-aria="close">✕</button>
       
-      <div class="modal-header">
+      <div class="story-modal-header">
         <span class="modal-year" id="modal-year"></span>
-        <h2 class="modal-title" id="modal-title"></h2>
+        <h2 class="story-modal-title" id="modal-title"></h2>
       </div>
 
-      <img id="modal-image" src="" alt="" class="modal-image">
+      <img id="modal-image" src="img/milestone-1968.jpg" alt="" class="modal-image">
 
       <div class="modal-story">
         <p id="modal-story-text"></p>
       </div>
 
       <div class="modal-source">
-        <p><strong>Source:</strong> <a id="modal-source-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+        <p><strong data-i18n="source">Source:</strong> <a id="modal-source-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
       </div>
     </div>
   </dialog>
 
-  <!-- Looking Forward Section -->
-  <section class="future-goals">
-    <div class="future-goals-content">
-      <h2>Looking Forward</h2>
-      <p>Intel's sustainability roadmap extends to three critical pillars. These represent Intel's stated environmental goals and commitments:</p>
-      <div class="goals-grid">
-        <div class="goal-card">
-          <h3>Climate Action</h3>
-          <p>Achieving net-zero Scope 1 and Scope 2 emissions by 2040 through continued investment in renewable energy, process efficiency, and carbon offset programs.</p>
-        </div>
-        <div class="goal-card">
-          <h3>Water Stewardship</h3>
-          <p>Reducing water consumption and improving water quality in manufacturing facilities worldwide while supporting water conservation in local communities.</p>
-        </div>
-        <div class="goal-card">
-          <h3>Circular Economy</h3>
-          <p>Designing products for longevity and recyclability, reducing electronic waste, and promoting responsible end-of-life product management across the value chain.</p>
-        </div>
-      </div>
-      <p class="goals-link"><a href="https://www.intel.com/content/www/us/en/environment/intel-and-the-environment.html" target="_blank" rel="noopener noreferrer">Learn more about Intel's environmental commitments</a></p>
-    </div>
-  </section>
+  <section class="focus-section" aria-labelledby="future-heading">
+  <div class="container"><p class="section-kicker" data-i18n="nextChapter">THE NEXT CHAPTER</p><h2 id="future-heading" data-i18n="forward">Progress with purpose.</h2>
+  <p class="section-intro" data-i18n="focusIntro">Three connected priorities for a more sustainable future.</p>
+  <div class="row g-4"><div class="col-12 col-md-6 col-lg-4"><article class="focus-card h-100">
+ <h3><svg class="focus-icon" aria-hidden="true" focusable="false"><use href="vendor/bootstrap-icons.svg#lightning-charge"></use></svg><span data-i18n="climate">Climate action</span></h3>
+ <p data-i18n="climateText">Investing in renewable electricity and energy efficiency to work toward net-zero operational emissions by 2040.</p>
+ <a class="btn btn-primary learn-more" href="https://www.intel.com/content/www/us/en/environment/intel-and-the-environment.html"><span data-i18n="learn">Learn More</span><span class="visually-hidden" data-i18n="climateLink"> about climate action</span><span class="direction-arrow" aria-hidden="true">→</span></a>
+ </article></div><div class="col-12 col-md-6 col-lg-4"><article class="focus-card h-100">
+ <h3><svg class="focus-icon" aria-hidden="true" focusable="false"><use href="vendor/bootstrap-icons.svg#droplet"></use></svg><span data-i18n="water">Water stewardship</span></h3>
+ <p data-i18n="waterText">Conserving water in manufacturing and supporting projects that restore water to local watersheds.</p>
+ <a class="btn btn-primary learn-more" href="https://www.intel.com/content/www/us/en/environment/intel-and-the-environment.html"><span data-i18n="learn">Learn More</span><span class="visually-hidden" data-i18n="waterLink"> about water stewardship</span><span class="direction-arrow" aria-hidden="true">→</span></a>
+ </article></div><div class="col-12 col-md-6 col-lg-4"><article class="focus-card h-100">
+ <h3><svg class="focus-icon" aria-hidden="true" focusable="false"><use href="vendor/bootstrap-icons.svg#arrow-repeat"></use></svg><span data-i18n="circular">Circular economy</span></h3>
+ <p data-i18n="circularText">Keeping materials in use through waste prevention, recovery, reuse, and recycling.</p>
+ <a class="btn btn-primary learn-more" href="https://www.intel.com/content/www/us/en/environment/intel-and-the-environment.html"><span data-i18n="learn">Learn More</span><span class="visually-hidden" data-i18n="circularLink"> about circular economy</span><span class="direction-arrow" aria-hidden="true">→</span></a>
+ </article></div></div></div></section>
+
+  <section class="faq-section" aria-labelledby="faq-heading"><div class="container faq-layout">
+  <div><p class="section-kicker" data-i18n="understand">UNDERSTANDING THE GOALS</p><h2 id="faq-heading" data-i18n="faq">A closer look.</h2></div>
+  <div class="accordion" id="sustainability-faq">
+  <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-one" aria-expanded="true" aria-controls="faq-one" data-i18n="faq1">What does net-zero operations mean?</button></h3><div id="faq-one" class="accordion-collapse collapse show" data-bs-parent="#sustainability-faq"><div class="accordion-body" data-i18n="answer1">Intel's 2040 commitment covers Scope 1 emissions from its operations and Scope 2 emissions from purchased energy. It is a goal, not a claim that these emissions have already reached net zero.</div></div></div>
+  <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-two" aria-expanded="false" aria-controls="faq-two" data-i18n="faq2">Why does water matter in chip manufacturing?</button></h3><div id="faq-two" class="accordion-collapse collapse" data-bs-parent="#sustainability-faq"><div class="accordion-body" data-i18n="answer2">Water is used to clean silicon wafers and operate manufacturing facilities. Using it efficiently and supporting watershed restoration helps protect a resource shared by factories and communities.</div></div></div>
+  <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-three" aria-expanded="false" aria-controls="faq-three" data-i18n="faq3">Where can I check the information?</button></h3><div id="faq-three" class="accordion-collapse collapse" data-bs-parent="#sustainability-faq"><div class="accordion-body"><span data-i18n="answer3">Each timeline story links to an Intel source. The source list below includes the historical reports behind these milestones.</span> <a href="#sources-heading" data-i18n="viewSources">View sources</a></div></div></div>
+  </div></div></section>
+
+  <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-heading"><div class="container"><div class="row g-5 align-items-start">
+  <div class="col-lg-5"><p class="section-kicker" data-i18n="stayConnected">STAY CONNECTED</p><h2 id="newsletter-heading" data-i18n="newsletter">Small updates.<br>A bigger picture.</h2><p data-i18n="newsletterIntro">Explore the ideas shaping technology and sustainability.</p><p class="demo-note" id="demo-note" data-i18n="demo">Student project demo. This form does not send or store your information or subscribe you to an Intel mailing list.</p></div>
+  <div class="col-lg-7"><form id="newsletter-form" class="newsletter-form" aria-describedby="demo-note" novalidate>
+  <div class="mb-4"><label class="form-label" for="subscriber-name" data-i18n="name">Name (optional)</label><input class="form-control" id="subscriber-name" name="name" autocomplete="name" dir="auto" maxlength="100"></div>
+  <div class="mb-4"><label class="form-label" for="subscriber-email" data-i18n="email">Email address (required)</label><input class="form-control" id="subscriber-email" name="email" type="email" autocomplete="email" inputmode="email" dir="ltr" required aria-describedby="email-help email-error"><div id="email-help" class="form-text" data-i18n="emailHelp">Use an address such as name@example.com.</div><p id="email-error" class="field-error" hidden></p></div>
+  <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="newsletter-consent" required aria-describedby="consent-error"><label class="form-check-label" for="newsletter-consent" data-i18n="consent">I would like to receive sustainability updates. (Required for this demo.)</label><p id="consent-error" class="field-error" hidden></p></div>
+  <button class="btn btn-primary subscribe-button" type="submit" data-i18n="subscribe">Subscribe</button><p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  </form></div></div></div></section>
 
   <!-- Verified Sources Section -->
-  <section class="sources-section">
+  <section class="sources-section" aria-labelledby="sources-heading">
     <div class="sources-content">
-      <h2>Verified Sources</h2>
-      <p>All milestone information has been fact-checked against Intel's official history, newsroom, and corporate responsibility reports.</p>
+      <h2 id="sources-heading" data-i18n="sources">Explore the sources</h2>
+      <p><span data-i18n="sourcesIntro">Historical milestones draw on Intel’s history, newsroom, and corporate responsibility reports. Timeline images are AI-generated illustrations.</span></p>
       <ul class="sources-list">
         <li><a href="https://www.intel.com/content/www/us/en/history/virtual-vault/articles/intels-founding.html" target="_blank" rel="noopener noreferrer">Intel's Founding</a></li>
         <li><a href="https://www.intel.com/content/www/us/en/history/virtual-vault/articles/the-intel-4004.html" target="_blank" rel="noopener noreferrer">The Intel 4004</a></li>
@@ -220,11 +245,14 @@
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer class="footer">
-    <p>Designed and built by Luka Mzhavanadze for the Intel Sustainability Timeline project.</p>
+    <p data-i18n="footer">© 2026 Luka Mzhavanadze · Intel Website Localization</p><p class="footer-note" data-i18n="student">An independent student project, not an official Intel website.</p><a href="#top" data-i18n="backTop">Back to top ↑</a>
   </footer>
 
+  <script src="vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="localization.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

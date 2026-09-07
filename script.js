@@ -127,8 +127,8 @@ function initializeTimeline() {
 function scrollTimeline(container, amount) {
   if (!container) return;
   container.scrollBy({
-    left: amount,
-    behavior: 'smooth'
+    left: document.documentElement.dir === "rtl" ? -amount : amount,
+    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
   });
 }
 
@@ -180,7 +180,7 @@ function initializeModal() {
  * @param {HTMLElement} triggerButton - The button that opened the modal
  */
 function openStoryModal(modal, storyId, triggerButton) {
-  const data = storyData[storyId];
+  const data = window.localizeStory ? window.localizeStory(storyData[storyId], storyId) : storyData[storyId];
 
   if (!data) {
     console.warn('Story data not found for ID:', storyId);
@@ -197,6 +197,7 @@ function openStoryModal(modal, storyId, triggerButton) {
   const sourceLink = document.getElementById('modal-source-link');
   sourceLink.textContent = data.sourceName;
   sourceLink.href = data.sourceUrl;
+  sourceLink.lang = 'en';
 
   // Show the modal
   modal.showModal();
