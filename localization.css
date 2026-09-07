@@ -2,7 +2,7 @@
 body{color:var(--ink);font-size:1rem;overflow-x:visible;background:#fff}
 .global-header{background:#00365c;color:white;border-bottom:1px solid #ffffff30}
 .site-navigation{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding-block:1.1rem}
-.wordmark{font-size:2.6rem;font-weight:750;letter-spacing:-.15rem;color:#fff;text-decoration:none;line-height:1}
+.wordmark{font-size:2.6rem;font-weight:750;letter-spacing:-.15rem;color:#fff;text-decoration:none;line-height:1;direction:ltr;unicode-bidi:isolate}
 .brand-dot{color:#69d4ff}.nav-actions{display:flex;gap:1.6rem;align-items:center}.nav-actions>a{color:#fff;text-decoration:none;font-weight:600}
 .nav-actions>a:hover{text-decoration:underline}.language-control{display:flex;align-items:center;gap:.6rem;font-size:.875rem}.language-control .form-select{width:auto;min-width:7rem;border:0}
 .skip-link{position:fixed;inset-block-start:-8rem;inset-inline-start:1rem;z-index:2000;background:#fff;color:#00365c;padding:1rem}.skip-link:focus{inset-block-start:1rem}
